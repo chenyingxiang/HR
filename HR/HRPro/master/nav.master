@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="nav.master.cs" Inherits="master_nav" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="/layui-v2.2.6/layui/css/layui.css" />
+    <script src="/layui-v2.2.6/layui/layui.js"></script>
+    <script src="/myjs/pub.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" class="layui-form" runat="server">
+        <div class="layui-bg-cyan">
+            <div class="layui-main">
+                <div style="float: left;">
+                    <div class="layui-bg-cyan">
+                        <ul class="layui-nav layui-bg-cyan">
+                            <li runat="server" id="navhome" class="layui-nav-item"><a href="#">首页</a></li>
+                            <li runat="server" id="navdiscuss" class="layui-nav-item"><a href="#">论坛</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="float: right;">
+                    <ul class="layui-nav layui-bg-cyan">
+                        <li runat="server" id="navmy" class="layui-nav-item"><a>
+                            <img class="layui-nav-img" src="/pic/my.jpg" />我的</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="#">我的资料</a></dd>
+                                <dd><a href="#">修改密码</a></dd>
+                                <dd><hr /></dd>
+                                <dd>
+                                    <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click">退出</asp:LinkButton>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="layui-clear"></div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
