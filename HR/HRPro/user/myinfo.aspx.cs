@@ -11,7 +11,7 @@ public partial class user_myinfo : System.Web.UI.Page
         lblimgInfo.Text = string.Empty;
         if (!IsPostBack)
         {
-
+            lblimgInfo.Text = "这是第一次加载";
 
         }
     }
